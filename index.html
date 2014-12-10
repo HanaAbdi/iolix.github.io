@@ -74,28 +74,14 @@
 		</a>
 		<a href="javascript:void(0)"><img id="next" src="pics/menu/arrow-right.png"/>
 		</a>
-		<div id="covers">
-			<a href="javascript:void(0)" onclick="updateContent('retail')" class="portfolio-section retail">
-				<img id="retail" src="pics/work-covers/retail.jpg"/>
-			</a>
-			<a href="javascript:void(0)" onclick="updateContent('web')" class="portfolio-section web">
-				<img id="web" src="pics/work-covers/web.jpg"/>
-			</a>
-			<a href="javascript:void(0)" onclick="updateContent('branding')" class="portfolio-section branding">
-				<img id="branding" src="pics/work-covers/branding.jpg"/>
-			</a>
-			<a href="javascript:void(0)" onclick="updateContent('infographics')" class="portfolio-section infographics">
-				<img id="infographics" src="pics/work-covers/infographics.jpg"/>
-			</a>
-			<a href="javascript:void(0)" onclick="updateContent('packaging')" class="portfolio-section packaging">
-				<img id="packaging" src="pics/work-covers/packaging.jpg"/>
-			</a>
-			<a href="javascript:void(0)" onclick="updateContent('interior')" class="portfolio-section interior">
-				<img id="interior" src="pics/work-covers/interior.jpg"/>
-			</a>
-			<a href="javascript:void(0)" onclick="updateContent('various')" class="portfolio-section various">
-				<img id="various" src="pics/work-covers/various.jpg"/>
-			</a>
+		<div class="portfolio-sections">
+			<div><img src="pics/work-covers/retail.jpg"/></div>
+			<div><img src="pics/work-covers/web.jpg"/></div>
+			<div><img src="pics/work-covers/branding.jpg"/></div>
+			<div><img src="pics/work-covers/infographics.jpg"/></div>
+			<div><img src="pics/work-covers/packaging.jpg"/></div>
+			<div><img src="pics/work-covers/interior.jpg"/></div>
+			<div><img src="pics/work-covers/various.jpg"/></div>
 		</div>
 	</section>
 
@@ -130,9 +116,19 @@
 		</div>
 	</div>
 
-  <script src='http://code.jquery.com/jquery-latest.min.js'></script>
-  <script src="js/main.js"></script>
-  <script src="js/projects.js"></script>
+	<script src='http://code.jquery.com/jquery-latest.min.js'></script>
+	<script src="js/main.js"></script>
+	<script src="js/projects.js"></script>
+	<script type="text/javascript" src="slick/slick.min.js"></script>
+
+	<script> $(document).ready(function(){
+	$('.portfolio-sections').slick({
+  infinite: true,
+  slidesToShow: 3,
+  slidesToScroll: 3
+});
+});
+	</script>
   
 
 </body>
